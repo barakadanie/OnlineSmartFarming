@@ -139,10 +139,15 @@ if ($login == false) {  ?>
  </div>
 
 
-
+<style>
+	.top{
+		background-color: green;
+	}
+</style>
 <div class="menu" id="myHeader">
 	<ul id="dc_mega-menu-orange" style="text-transform: uppercase;" class="dc_mm-orange">
-	<div class="topnav" id="myTopnav">
+	<div class="top">
+	<div class="topnav" id="myTopnav" >
 	  <a href="index.php">Home</a>
 	  <a href="topbrands.php">Top Brands</a>
 <?php 
@@ -184,6 +189,7 @@ if ($chkOrder) { ?>
 	    <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
     <i class="fa fa-bars"></i>
   </a>
+  </div>
   </div>
 	  <div class="clear"></div>
 	</ul>

@@ -87,8 +87,7 @@ if (isset($_GET['action']) && $_GET['action'] == "logout")
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="dashboard.php"><span>Dashboard</span></a> </li>
-                <li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
-				<li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
+                <li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
                 <li class="ic-grid-tables"><a href="message.php"><span>Message
                     <?php
                     //query all messages from the contact table from the database and display the in the tables 

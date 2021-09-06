@@ -30,7 +30,8 @@ $type = $this->fm->validation($data['type']);
 $name = $this->fm->validation($data['name']);
 $contact = $this->fm->validation($data['contact']);
 $location = $this->fm->validation($data['location']);
-
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with the query operations
 $productName = mysqli_real_escape_string($this->db->link, $data['productName']);
 $catId       = mysqli_real_escape_string($this->db->link, $data['catId']);
 $brandId     = mysqli_real_escape_string($this->db->link, $data['brandId']);
@@ -47,9 +48,11 @@ $location    = mysqli_real_escape_string($this->db->link, $data['location']);
     $file_name = $file['image']['name'];
     $file_size = $file['image']['size'];
     $file_temp = $file['image']['tmp_name'];
-
+	// explode() function breaks a string into an array
     $div = explode('.', $file_name);
+	//converts string to lowercase
     $file_ext = strtolower(end($div));
+	//used to return a part of a string
     $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
     $uploaded_image = "uploads/".$unique_image;
 
@@ -61,6 +64,7 @@ if ($productName == "" || $catId == "" || $brandId == "" || $body == "" || $pric
      echo "<span class='error'>Image Size should be less then 1MB!
      </span>";
     } elseif (in_array($file_ext, $permited) === false) {
+		//implode() function accept its parameters in either order
      echo "<span class='error'>You can upload only:-".implode(', ', $permited)."</span>";
 
 
@@ -88,19 +92,7 @@ FROM producttbl as p,categorytbl as c, brandtbl as b
 WHERE p.catId = c.catId AND p.brandId = b.brandId
 ORDER BY p.productId DESC";
 
-/*
-$query = "SELECT producttbl.*, categorytbl.catName,brandtbl.brandName
-FROM producttbl
-
-INNER JOIN categorytbl
-ON producttbl.catId = categorytbl.catId
-
-INNER JOIN brandtbl
-ON producttbl.brandId = brandtbl.brandId
-ORDER BY producttbl.productId DESC";
-*/
-
-	$result = $this->db->select($query);
+$result = $this->db->select($query);
 	return $result;
 }
 
@@ -224,8 +216,10 @@ public function delProById($id){
 $query = "SELECT * FROM producttbl WHERE productId = '$id'";
 $getData = $this->db->select($query);
 if ($getData) {
+	//function fetches a result row as an associative array(an array with strings as an index)
 while ($delImg = $getData->fetch_assoc()) {
 $dellink = $delImg['image'];
+//used to delete a file
 unlink($dellink);
 
 }
@@ -381,6 +375,7 @@ public function checkWlistData($cmrId){
 	$result = $this->db->select($query);
 	return $result;	
 }
+
 public function delWlistData($cmrId, $productId){
 	$query = "DELETE FROM wishlisttbl WHERE cmrId = '$cmrId' AND productId = '$productId'";
 	$delete = $this->db->delete($query);

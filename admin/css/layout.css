@@ -71,6 +71,7 @@ h1 a {
 #branding {
   font-weight: normal;
   margin-bottom: 0;
+  background-color: #005c17;
   padding: 22px 10px 3px;
   text-align: left;
 }
@@ -248,9 +249,7 @@ ul.section {
 	border-top:0;
 	margin-bottom:0;
 }
-ul.section li {
 
-}
 ul.section li a {
 	background:url(../img/sidemenu-repeat.jpg) repeat-x;
 	line-height:26px;

@@ -136,7 +136,7 @@ body{
 .shopping_cart span.no_product{
 	font-size:13px;
 	font-weight:bold;
-	color: #DD0F0E;
+	color: #119100;
 }
 input[type="number"] {
   border: 1px solid #b8b8b8;
@@ -558,7 +558,7 @@ p.note{
 .heading h3{
 	font-family: 'Monda', sans-serif;
 	font-size:22px;
-	color:#602D8D;
+	color:#232F64;
 	text-transform:uppercase;
 }
 .sort,.show{
@@ -719,7 +719,7 @@ p.note{
 	background: -webkit-linear-gradient(top,  #232F3E 55%,#232F3E 100%); 
 	background: -o-linear-gradient(top,  #232F3E 55%,#232F3E 100%); 
 	background: -ms-linear-gradient(top,  #232F3E 55%,#232F3E 100%); 
-	background: linear-gradient(to bottom,  #232F3E 55%,#232F3E 100%); 
+	background: linear-gradient(to bottom,  #003804 55%,#003804 100%); 
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#414045', endColorstr='#232F3E',GradientType=0 );
 	box-shadow: inset 0px 1px 8px #222;
 }
@@ -1438,7 +1438,7 @@ table.tblone input[type="submit"] {
   padding: 1px 5px;
 }
 table.tblone a {
-  color: #fe5800;
+  color: #073900;
   font-weight: bold;
   text-decoration: none;
 }
