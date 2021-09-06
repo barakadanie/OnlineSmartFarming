@@ -24,6 +24,9 @@ private $fm;
 
 public function brandInsert($brandName){
 		$brandName = $this->fm->validation($brandName);
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
         $brandName = mysqli_real_escape_string($this->db->link, $brandName);
 
 

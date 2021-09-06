@@ -22,6 +22,9 @@ private $fm;
 
 	public function catInsert($catName){
 		$catName = $this->fm->validation($catName);
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
         $catName = mysqli_real_escape_string($this->db->link, $catName);
 
 
@@ -60,6 +63,9 @@ $query = "SELECT * FROM categorytbl WHERE catId = '$id'";
 public function catUpdate($catName,$id){
 
 	$catName = $this->fm->validation($catName);
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
     $catName = mysqli_real_escape_string($this->db->link, $catName);
     $id = mysqli_real_escape_string($this->db->link, $id);
 

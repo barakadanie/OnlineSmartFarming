@@ -21,6 +21,9 @@ private $fm;
 	}
 public function addToCart($quantity, $id){
 	$quantity = $this->fm->validation($quantity);
+	//used to escape all special characters for use in an SQL query. 
+	//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+	//the query operations
     $quantity = mysqli_real_escape_string($this->db->link, $quantity);
     $productId = mysqli_real_escape_string($this->db->link, $id);
 

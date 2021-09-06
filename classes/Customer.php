@@ -20,7 +20,9 @@ private $fm;
 		$this->fm = new Format();
 	}
 public function customerRegistration($data){
-
+///used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
 $name = mysqli_real_escape_string($this->db->link, $data['name']);
 $address = mysqli_real_escape_string($this->db->link, $data['address']);
 $city = mysqli_real_escape_string($this->db->link, $data['city']);
@@ -69,6 +71,7 @@ $query = "SELECT * FROM customertbl WHERE email = '$email' AND pass = '$pass'";
 $result = $this->db->select($query);
 if ($result != false) {
 	$value = $result->fetch_assoc();
+	//store information (in variables) to be used 
 	Session::set("cuslogin",true);
 	Session::set("cmrId",$value['id']);
 	Session::set("cmrName",$value['name']);
@@ -87,7 +90,9 @@ public function getCustomerData($id){
 }
 
 public function customerUpdate($data,$cmrId){
-
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
 $name = mysqli_real_escape_string($this->db->link, $data['name']);
 $address = mysqli_real_escape_string($this->db->link, $data['address']);
 $city = mysqli_real_escape_string($this->db->link, $data['city']);

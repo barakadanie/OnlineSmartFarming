@@ -31,7 +31,9 @@ private $fm;
 
 $adminUser = $this->fm->validation($adminUser);
 $adminPassword = $this->fm->validation($adminPassword);
-
+//used to escape all special characters for use in an SQL query. 
+//It is used before inserting a string in a database, as it removes any special characters that may interfere with 
+//the query operations
 $adminUser = mysqli_real_escape_string($this->db->link, $adminUser);
 $adminPassword = mysqli_real_escape_string($this->db->link, $adminPassword);
 
