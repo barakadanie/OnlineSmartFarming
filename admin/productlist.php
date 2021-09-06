@@ -11,7 +11,7 @@ $fm = new Format();
 
 <?php
 if (isset($_GET['delpro'])) {
-	//removes these characters
+	//removes appearnce of these characters
 	$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
 	$delpro = $pd->delProById($id);
 }

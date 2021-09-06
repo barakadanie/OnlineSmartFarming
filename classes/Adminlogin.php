@@ -51,7 +51,7 @@ if (empty($adminUser) ||empty($adminPassword) ) {
 
 			if ($result != false) {
 				$value = $result->fetch_assoc();
-
+				//gets the values from the database tales and assignss them to the given declared variable
 				Session::set("adminlogin",true);
 				Session::set("adminId",$value['adminId']);
 				Session::set("adminUser",$value['adminUser']);
