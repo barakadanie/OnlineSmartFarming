@@ -1,7 +1,7 @@
 <?php include 'inc/header.php';?>
 <?php include 'inc/sidebar.php';?>
 <?php include '../classes/Product.php';?>
-<?php include_once '../helpers/Formate.php';?>
+<?php include_once '../helpers/Format.php';?>
 
 <?php
 $pd = new Product();
@@ -11,6 +11,7 @@ $fm = new Format();
 
 <?php
 if (isset($_GET['delpro'])) {
+	//removes these characters
 	$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
 	$delpro = $pd->delProById($id);
 }

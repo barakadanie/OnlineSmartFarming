@@ -2,7 +2,7 @@
 include '../lib/Session.php';
 Session::checkSession();
 include '../lib/Database.php';
-include '../helpers/Formate.php';
+include '../helpers/Format.php';
 spl_autoload_register(function($class)
 {
 include_once "classess/".$class.".php";
