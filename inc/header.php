@@ -140,8 +140,8 @@ if ($login == false) {  ?>
 
 
 <style>
-	.top{
-		background-color: green;
+	#myTopnav{
+		background-color:#003f0b;
 	}
 </style>
 <div class="menu" id="myHeader">
