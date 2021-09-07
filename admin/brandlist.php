@@ -11,7 +11,7 @@ if (isset($_GET['delbrand']))
 ?>
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Brand List</h2>
+        <h2><marquee behavior="3" direction="right">Brand List</marquee></h2>
             <div class="block">   
            	<?php 
                if (isset($delbrand)) 

@@ -19,7 +19,7 @@ if (isset($_GET['delpro'])) {
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Post List</h2>
+        <h2><marquee behavior="left" direction="right">Products List </marquee></h2>
         <div class="block"> 
 
 
