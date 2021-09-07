@@ -5,7 +5,7 @@ include '../lib/Database.php';
 include '../helpers/Format.php';
 spl_autoload_register(function($class)
 {
-include_once "classess/".$class.".php";
+include_once "classes/".$class.".php";
 });
 ?>
 <?php  
@@ -22,7 +22,7 @@ $fm = new Format();
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Admin</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
@@ -44,7 +44,9 @@ $fm = new Format();
     <script src="js/setup.js" type="text/javascript"></script>
 	 <script type="text/javascript">
         $(document).ready(function () {
+            //compresses the sidebar menu to expanding when munu headers are clicked
             setupLeftMenu();
+            //sets the height of the side menu bar
 		    setSidebarHeight();
         });
     </script>
@@ -56,8 +58,9 @@ $fm = new Format();
                 <div class="floatleft logo">
                     <img src="img/logo1.png" alt="Logo" />
 				</div>
+            <!-- tob header styling -->
 			<div class="floatleft middle" style="width: 80%;">
-				<h1><marquee behavior="1" direction="r">Online Smart Farm dashboard</marquee></h1>
+				<h1><marquee behavior="1" direction="right">Online Smart Farm dashboard</marquee></h1>
 				<p>Online Smart Farm url:<a href="../" target="_blank" style="color:aqua;text-decoration: underline;"><i>www.onlinesmartfarming.org</i></a></p>
 			</div>
                 <div class="floatright">
@@ -68,6 +71,7 @@ $fm = new Format();
 //logs out f the admin panel and opens the log in page
 if (isset($_GET['action']) && $_GET['action'] == "logout") 
 {
+   //closses the admin homepage and opens the login page
    Session::destroy();
 }
 ?>
@@ -96,7 +100,7 @@ if (isset($_GET['action']) && $_GET['action'] == "logout")
 
                         if ($msg) 
                         {
-                            //append on the left(first column) the message number
+                            //adds a message number notificatin i.e messages(1)
                             $count = mysqli_num_rows($msg);
                             echo "(".$count.")";
                         }   
