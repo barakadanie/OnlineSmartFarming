@@ -56,8 +56,8 @@ $fm = new Format();
                 <div class="floatleft logo">
                     <img src="img/logo1.png" alt="Logo" />
 				</div>
-			<div class="floatleft middle">
-				<h1>Online Smart Farm dashboard</h1>
+			<div class="floatleft middle" style="width: 80%;">
+				<h1><marquee behavior="1" direction="r">Online Smart Farm dashboard</marquee></h1>
 				<p>Online Smart Farm url:<a href="../" target="_blank" style="color:aqua;text-decoration: underline;"><i>www.onlinesmartfarming.org</i></a></p>
 			</div>
                 <div class="floatright">

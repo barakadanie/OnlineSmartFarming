@@ -28,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                     </tr>
 					<tr> 
                         <td>
-                            <input type="submit" name="submit" Value="Save" />
+                            <input type="submit" name="submit" Value="Save"/>
                         </td>
                     </tr>
                 </table>
