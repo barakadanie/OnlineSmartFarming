@@ -19,10 +19,10 @@ $cmr = new Customer();
 ?>
 
 <?php
-  header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache"); 
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
-  header("Cache-Control: max-age=2592000");
+  header("Cache-Control: no-cache, must-revalidate");//no-store directive means browsers aren't allowed to cache a response and must pull it from the server each time it's requested.
+  header("Pragma: no-cache"); // tell the server and any intermediate caches that it wants a fresh version of the resource
+  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // to disable browser cache on dynamically generated pages
+  header("Cache-Control: max-age=2592000");//the maximum amount of time in seconds that fetched responses are allowed to be used again
 ?>
 
 

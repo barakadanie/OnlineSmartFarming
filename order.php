@@ -1,7 +1,8 @@
 <?php include 'inc/header.php';?>
 <?php 
 $login = Session::get("cuslogin");
-if ($login == false) {
+if ($login == false) 
+{
     header("Location:login.php");
 }
  ?>
@@ -68,8 +69,8 @@ if (isset($_GET['customerId'])) {
                             echo "Confirmed";
                          }
 
-
-           ?></td>
+           ?>
+           </td>
                     </td>
 
                 
@@ -84,11 +85,8 @@ if (isset($_GET['customerId'])) {
                  <?php  }  ?>
                    
             </tr>
-                            
-
-
-                        <?php } } ?>    
-                        </table>
+                <?php } } ?>    
+                    </table>
 
     		</div>
     	</div>

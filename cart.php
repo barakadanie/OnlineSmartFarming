@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
  ?>
  <?php  
 if (!isset($_GET['id'])) {
-	echo "<meta http-equiv = 'refresh' content ='0;URL=?id=nayem' />";
+	echo "<meta http-equiv = 'refresh' content ='0;URL=?id=baraka' />";
 }
  ?>
 
@@ -113,6 +113,10 @@ if (!isset($_GET['id'])) {
 								<td>Kshs. <?php echo $sum; ?></td>
 							</tr>
 							<tr>
+								<th>Shipping Fee: </th>
+								<td>20%</td>
+							</tr>
+							<tr>
 								<th>VAT : </th>
 								<td>10%</td>
 							</tr>
@@ -121,7 +125,8 @@ if (!isset($_GET['id'])) {
 								<td>Kshs. 
 									<?php 
 									$vat = $sum * 0.1;
-									$gtotal = $sum + $vat;
+									$sf = $sum*0.25;
+									$gtotal = $sum + $vat+$sf;
 									echo $gtotal;
 									 ?>
 								</td>

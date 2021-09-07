@@ -18,7 +18,6 @@
 						<li><a href="about.php">About Us</a></li>
 						<li><a href="faq.php">Customer Service</a></li>
 						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="contact.php"><span>Site Map</span></a></li>
 						<li><a href="defaults.php"><span>Search Terms</span></a></li>
 						</ul>
 				</div>
@@ -64,15 +63,7 @@
     </div>
     <script type="text/javascript">
 		$(document).ready(function() {
-			/*
-			var defaults = {
-	  			containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-	 		};
-			*/
-			
+		
 			$().UItoTop({ easingType: 'easeOutQuart' });
 			
 		});

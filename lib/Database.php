@@ -1,5 +1,5 @@
 <?php 
-$filepath = realpath(dirname(__FILE__));
+$filepath = realpath(dirname(__FILE__));//returns the full directory path of a file
 include_once ($filepath.'/../config/config.php');
 ?>
 

@@ -31,14 +31,14 @@ class Session{
    header("Location:login.php");
   }
  }
-
+//checks login session
  public static function checkLogin(){
   self::init();
   if (self::get("adminlogin")== true) {
    header("Location:dashboard.php");
   }
  }
-
+//when  logout action initiated closses the dashbord and opens login/sets login session inactive
  public static function destroy(){
   session_destroy();
   header("Location:login.php");
