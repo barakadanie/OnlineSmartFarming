@@ -1,7 +1,8 @@
 <?php include 'inc/header.php';?>
 <?php 
 $login = Session::get("cuslogin");
-if ($login == true) {
+if ($login == true) 
+{
 	header("Location:order.php");
 }
  ?>
@@ -59,7 +60,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
 							<div>
 							   <input type="text" name="city" placeholder="City"/>
 							</div>
-							
+							<div>
+							   <input type="text" name="county" placeholder="County"/>
+							</div>							
 							<div>
 								<input type="text" name="zip" placeholder="Zip-Code"/>
 							</div>

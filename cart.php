@@ -80,74 +80,70 @@ if (!isset($_GET['id'])) {
 							<input type="submit" name="submit" value="Update"/>
 						</form>
 					</td>
-								<td>
-							Kshs. <?php
-						$total = $result['price'] * $result['quantity'];
-						echo $total;
+					<td>
+					Kshs. <?php
+							$total = $result['price'] * $result['quantity'];
+							echo $total;
 						 ?>
 							
 
-									</td>
-								<td><a onclick="return confirm('Are you Sure to Delete!')" href="?delpro=<?php echo $result['cartId']; ?>">X</a></td>
-							</tr>
-							
-							<?php 
+					</td>
+						<td><a onclick="return confirm('Are you Sure you want to Delete!')" href="?delpro=<?php echo $result['cartId']; ?>">X</a></td>
+					</tr>
+						<?php 
 							$qty = $qty + $result['quantity'];
 							$sum = $sum + $total;
 							Session::set("qty",$qty);
 							Session::set("sum",$sum);
-							 ?>
-
-
+						?>
 						<?php } } ?>	
 						</table>
-
 						<?php
 						$getData = $ct->checkCartTable();
 							if ($getData){
 
 								?>
-						<table style="float:right;text-align:left;" width="40%">
-							<tr>
-								<th>Sub Total : </th>
-								<td>Kshs. <?php echo $sum; ?></td>
-							</tr>
-							<tr>
-								<th>Shipping Fee: </th>
-								<td>20%</td>
-							</tr>
-							<tr>
-								<th>VAT : </th>
-								<td>10%</td>
-							</tr>
-							<tr>
-								<th>Grand Total :</th>
-								<td>Kshs. 
-									<?php 
-									$vat = $sum * 0.1;
-									$sf = $sum*0.25;
-									$gtotal = $sum + $vat+$sf;
-									echo $gtotal;
-									 ?>
-								</td>
-							</tr>
-
-					   </table>
-					<?php }else{
+								<table style="float:right;text-align:left;" width="40%">
+									<tr>
+										<th>Sub Total : </th>
+										<td>Kshs. <?php echo $sum; ?></td>
+									</tr>
+									<tr>
+										<th>Shipping Fee: </th>
+										<td>20%</td>
+									</tr>
+									<tr>
+										<th>VAT : </th>
+										<td>10%</td>
+									</tr>
+									<tr>
+										<th>Grand Total :</th>
+										<td>Kshs. 
+											<?php 
+											$vat = $sum * 0.1;
+											$sf = $sum*0.25;
+											$gtotal = $sum + $vat+$sf;
+											echo $gtotal;
+											?>
+										</td>
+									</tr>
+								</table>
+					<?php }
+					else
+					{
 						header("Location:index.php");
 						//echo "Cart Empty ! Please Shop Now...";
 					} ?>
 					</div>
-					<div class="shopping">
-						<div class="shopleft">
-							<a href="index.php"> <img src="images/shop.png" alt="" /></a>
-						</div>
-						<div class="shopright">
-							<a href="payment.php"> <img src="images/check.png" alt="" /></a>
-						</div>
-					</div>
+			<div class="shopping">
+				<div class="shopleft">
+					<a href="index.php"> <img src="images/shop.png" alt="" /></a>
+				</div>
+				<div class="shopright">
+					<a href="payment.php"> <img src="images/check.png" alt="" /></a>
+				</div>
+			</div>
     	</div>  	
-       <div class="clear"></div>
-    </div>
- </div>
+    <div class="clear"></div></div>
+</div>
 <?php include 'inc/footer.php';?>

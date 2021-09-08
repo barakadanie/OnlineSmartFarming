@@ -26,6 +26,7 @@ public function customerRegistration($data){
 $name = mysqli_real_escape_string($this->db->link, $data['name']);
 $address = mysqli_real_escape_string($this->db->link, $data['address']);
 $city = mysqli_real_escape_string($this->db->link, $data['city']);
+$county = mysqli_real_escape_string($this->db->link, $data['county']);
 $country = mysqli_real_escape_string($this->db->link, $data['country']);
 $zip = mysqli_real_escape_string($this->db->link, $data['zip']);
 $phone = mysqli_real_escape_string($this->db->link, $data['phone']);
@@ -33,7 +34,7 @@ $email = mysqli_real_escape_string($this->db->link, $data['email']);
 $pass = mysqli_real_escape_string($this->db->link, md5($data['pass']));
 
 
-if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == "" || $phone == "" || $email == "" || $pass == "") {
+if ($name == "" || $address == "" || $city == "" ||$county == "" || $country == "" || $zip == "" || $phone == "" || $email == "" || $pass == "") {
 	
 	$msg = "<span class='error'>Fields must not be empty !</span>";
 	return $msg;
@@ -47,7 +48,7 @@ if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == ""
   }else{
 
 
-  	 $query = "INSERT INTO customertbl(name,address,city,country,zip,phone,email,pass) VALUES('$name','$address','$city','$country','$zip','$phone','$email','$pass')";
+  	 $query = "INSERT INTO customertbl(name,address,city,county,country,zip,phone,email,pass) VALUES('$name','$address','$city','$county','$country','$zip','$phone','$email','$pass')";
 
 	 $inserted_row = $this->db->insert($query);
 			if ($inserted_row) {
@@ -96,27 +97,29 @@ public function customerUpdate($data,$cmrId){
 $name = mysqli_real_escape_string($this->db->link, $data['name']);
 $address = mysqli_real_escape_string($this->db->link, $data['address']);
 $city = mysqli_real_escape_string($this->db->link, $data['city']);
+$county = mysqli_real_escape_string($this->db->link, $data['county']);
 $country = mysqli_real_escape_string($this->db->link, $data['country']);
 $zip = mysqli_real_escape_string($this->db->link, $data['zip']);
 $phone = mysqli_real_escape_string($this->db->link, $data['phone']);
 $email = mysqli_real_escape_string($this->db->link, $data['email']);
 
 
-if ($name == "" || $address == "" || $city == "" || $country == "" || $zip == "" || $phone == "" || $email == "") {
+if ($name == "" || $address == "" || $city == "" || $county == "" || $country == "" || $zip == "" || $phone == "" || $email == "") {
 	
 	$msg = "<span class='error'>Fields must not be empty !</span>";
 	return $msg;
 }else{
 
 
-  	 $query = "INSERT INTO customertbl(name,address,city,country,zip,phone,email) VALUES('$name','$address','$city','$country','$zip','$phone','$email',)";
+  	 $query = "INSERT INTO customertbl(name,address,city,county,country,zip,phone,email) VALUES('$name','$address','$city','$county','$country','$zip','$phone','$email',)";
 
 	$query = "UPDATE customertbl
 
 	SET
 	name = '$name',
 	address = '$address', 
-	city = '$city', 
+	city = '$city',
+	country = '$county', 
 	country = '$country', 
 	zip = '$zip', 
 	phone = '$phone', 
