@@ -23,7 +23,7 @@ img{max-width:100%;}
 /*end reset*/
 body{
 	font-family:Arial, Helvetica, sans-serif;
-	background:url(../images/new.png);
+	background:url(../images/unnamed.jpg);
 }
 .wrap{
 	width:78%;
@@ -35,7 +35,7 @@ body{
 	background:#FFF;
 }
 .header_top{
-	padding:20px 0;
+	padding:0px 0;
 }
 .logo{
 	float:left;
@@ -64,7 +64,7 @@ body{
 	border:none;
 	background:none;
 	font-size:14px;
-	color:#a5a5a5;
+	color:#070707;
 	font-family:Arial;
 	outline:none;
 	margin:0;

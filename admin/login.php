@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          padding-top: 90px;
          margin-left: 600px;
          width: 560px;
-         height: 100px;
+         height: 90px;
 
       }
       .me

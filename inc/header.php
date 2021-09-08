@@ -142,14 +142,15 @@ if ($login == false) {  ?>
 <style>
 	#myTopnav{
 		background-color:#003f0b;
+		margin-top: 10px;
 	}
 </style>
 <div class="menu" id="myHeader">
 	<ul id="dc_mega-menu-orange" style="text-transform: uppercase;" class="dc_mm-orange">
 	<div class="top">
 	<div class="topnav" id="myTopnav" >
-	  <a href="index.php">Home</a>
-	  <a href="topbrands.php">Top Brands</a>
+	  <a href="index.php" style="font-weight: bold;">Home</a>
+	  <a href="topbrands.php"style="font-weight: bold;">Top Brands</a>
 <?php 
 $chkCart = $ct->checkCartTable();
 if ($chkCart) { ?>
@@ -161,14 +162,14 @@ if ($chkCart) { ?>
 $cmrId = Session::get("cmrId");
 $chkOrder = $ct->checkOrder($cmrId);
 if ($chkOrder) { ?>
- <a href="orderdetails.php">Order</a>
+ <a href="orderdetails.php"style="font-weight: bold;">Order</a>
 <?php } ?>
 
 	 
 		<?php 
 		$login = Session::get("cuslogin");
 		if ($login == true) { ?>
-		<a href="profile.php">Profile</a> 
+		<a href="profile.php"style="font-weight: bold;">Profile</a> 
 		<?php } ?>
 	  
 
@@ -176,7 +177,7 @@ if ($chkOrder) { ?>
 		$getPd = $pd->getCompareData($cmrId);
 		if ($getPd) {
 			?>
-	  <a href="compare.php">Compare</a> 
+	  <a href="compare.php"style="font-weight: bold;">Compare</a> 
 	  <?php } ?>
 
 	  <?php 
@@ -185,7 +186,7 @@ if ($chkOrder) { ?>
 			?>
 	  <a href="wishlist.php">Wishlist</a> 
 	  <?php } ?>
-	  <a href="contact.php">Contact</a>
+	  <a href="contact.php"style="font-weight: bold;">Contact</a>
 	    <a href="javascript:void(0);" class="icon" onclick="myFunction1()">
     <i class="fa fa-bars"></i>
   </a>

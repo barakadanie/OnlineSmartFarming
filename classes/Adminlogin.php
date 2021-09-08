@@ -44,8 +44,8 @@ if (empty($adminUser) ||empty($adminPassword) ) {
 		} else{
 
 
-			$query = "SELECT * FROM admintbl WHERE adminUser = 'admin'
-			AND adminPassword = 'admin001'";
+			$query = "SELECT * FROM admintbl WHERE adminUser = '$adminUser'
+			AND adminPassword = '$adminPassword'";
 
 			$result = $this->db->select($query);
 
