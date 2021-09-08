@@ -2902,13 +2902,13 @@ footer.site-footer .footer-inner a {
     overflow: hidden!important
 }
 
-@media(max-width:1680px) {
+@media(max-width:1360px) {
     .timeline li {
         padding: 2px 0
     }
 }
 
-@media(max-width:1368px) {
+@media(max-width:1366px) {
     .twt-category {
         margin-bottom: 0
     }
@@ -3218,7 +3218,7 @@ footer.site-footer .footer-inner a {
 
 @media(max-width:768px) {
     .navbar {
-        height: 100vh
+        height: 100vh;
     }
     .navbar .navbar-nav li.menu-item-has-children>a:before {
         display: block!important
