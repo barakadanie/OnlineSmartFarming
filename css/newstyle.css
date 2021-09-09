@@ -29,10 +29,10 @@ body{
 	width:78%;
 	margin:0 auto;
 	padding:0 1%;
-	background:#FFF;
+	background:rgb(245, 235, 235);
 }
 .header{
-	background:#FFF;
+	background:rgb(245, 235, 235);;
 }
 .header_top{
 	padding:0px 0;
@@ -173,6 +173,7 @@ input[type="number"] {
   height: 38px;
   margin-left: 10px;
   text-align: center;
+  border-radius: 5%;
   width: 144px;
   background: #005010;
 }
@@ -180,7 +181,7 @@ input[type="number"] {
 	color:#fff;
 }
 .login:hover{
-	background:#11f705;
+	background:#372903;
 }
 /*** Login ***/
 .register_account h3,.login_panel h3{
