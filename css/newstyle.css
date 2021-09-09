@@ -191,13 +191,13 @@ input[type="number"] {
 	padding-bottom:.4em;
 }
 .register_account {
-  background: #fff none repeat scroll 0 0;
+  background: rgb(1, 56, 5) none repeat scroll 0 0;
   border: 1px solid #c0bebe;
   border-radius: 3px;
   float: left;
-  height: 300px;
+  height: 325px;
   padding: 20px;
-  width: 712px;
+  width: 720px;
 }
 .register_account form input[type="text"],.register_account form select{
 	font-size:12px;
