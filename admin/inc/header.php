@@ -5,7 +5,7 @@ include '../lib/Database.php';
 include '../helpers/Format.php';
 spl_autoload_register(function($class)
 {
-include_once "classes/".$class.".php";
+include_once "../classes/".$class.".php";
 });
 ?>
 <?php  

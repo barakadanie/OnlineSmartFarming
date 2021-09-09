@@ -42,7 +42,8 @@ if (!isset($_GET['catId']) || $_GET['catId'] == NULL) {
 
 			
 			<?php }}else{
-				header("location:404.php");
+				//header("location:404.php");
+				echo 'Cart empty';
 			} ?>
 			</div>
 

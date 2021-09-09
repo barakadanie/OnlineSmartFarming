@@ -2,7 +2,7 @@
 <?php include 'inc/sidebar.php';?>
 <?php 
 $filepath = realpath(dirname(__FILE__));
-include_once ($filepath.'/../classess/Customer.php');
+include_once ($filepath.'/../classes/Customer.php');
 ?>
 <?php
 if (!isset($_GET['custId']) || $_GET['custId'] == NULL) {
