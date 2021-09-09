@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
 ?>
 <div class="grid_10">
     <div class="box round first grid">
-        <h2><marquee behavior="scroll" direction="right">Add New Product</marquee></h2>
+        <h2><marquee behavior="alternate" direction="right">Add New Product</marquee></h2>
         <div class="block"> 
          <?php
         if (isset($insertProduct)) {

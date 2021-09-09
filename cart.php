@@ -131,8 +131,8 @@ if (!isset($_GET['id'])) {
 					<?php }
 					else
 					{
-						header("Location:index.php");
-						//echo "Cart Empty ! Please Shop Now...";
+						//header("Location:index.php");
+						echo "Cart Empty ! Please Shop Now...";
 					} ?>
 					</div>
 			<div class="shopping">
