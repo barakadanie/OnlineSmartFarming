@@ -141,8 +141,13 @@ if ($login == false) {  ?>
 
 <style>
 	#myTopnav{
-		background-color:#003f0b;
+		background-color:#05003d;
 		margin-top: 10px;
+		
+	}
+	#myTopnav:hover
+	{
+		background-color:#005010;
 	}
 </style>
 <div class="menu" id="myHeader">

@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
 								<input type="text" name="zip" placeholder="Zip-Code"/>
 							</div>
 							<div>
-								<input type="text" name="email" placeholder="Email"/>
+								<input style="width:97.6%;height: 29px;margin-top: 1.5%;margin-bottom: 5%;" type="email" name="email" placeholder="Email"/>
 							</div>
 		    			 </td>
 		    			<td>
@@ -90,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['register'])) {
 		    	</td>
 		    </tr> 
 		    </tbody></table> 
-		   <div class="search"><div><button class="grey" name="register">Create Account</button></div></div>
+		   <div style="margin-left: 80%;" class="search"><div><button class="grey" name="register">Create Account</button></div></div>
 		    <div class="clear"></div>
 		    </form>
     	</div>  	
