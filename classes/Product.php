@@ -308,9 +308,12 @@ public function insertCompareData($cmprid,$cmrId){
 		$productName = $result['productName'];
 		$price = $result['price'];
 		$image = $result['image'];
+		$name=$result['name'];
+		$contact=$result['contact'];
+		$location=$result['location'];
 
 		$query = "INSERT INTO comparetbl(cmrId,productId,productName,price,image)VALUES
-			('$cmrId','$productId','$productName','$price','$image')";
+			('$cmrId','$productId','$productName','$price','$image','$name','$contact','$location')";
 			$inserted_row = $this->db->insert($query);
 
 			if ($inserted_row) {
