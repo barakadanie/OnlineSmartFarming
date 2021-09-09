@@ -196,7 +196,7 @@ if ($file_size >1048567) {
 	 type        = '$type',
 	 name		 ='$name',
 	 contact	 ='$contact',
-	 location	 ='$location',
+	 location	 ='$location'
 	 WHERE productId = '$id'";
 
 	 $updatedted_row = $this->db->update($query);

@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
                         </textarea>
                     </td>
                 </tr>
-				<tr>
+                <tr>
                     <td>
                         <label>Price</label>
                     </td>
@@ -131,7 +131,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
                         <input type="text" name="price" value="<?php echo $value['price'];?>" class="medium" />
                     </td>
                 </tr>
-            
+				<tr>
+                    <td>
+                        <label>Seller Name</label>
+                    </td>
+                    <td>
+                        <input type="text" name="name" value="<?php echo $value['name'];?>" class="medium" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Seller Contact</label>
+                    </td>
+                    <td>
+                        <input type="text" name="contact" value="<?php echo $value['contact'];?>" class="medium" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Seller location</label>
+                    </td>
+                    <td>
+                        <input type="text" name="location" value="<?php echo $value['location'];?>" class="medium" />
+                    </td>
+                </tr>
+
                 <tr>
                     <td>
                         <label>Upload Image</label>

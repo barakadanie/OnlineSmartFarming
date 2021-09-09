@@ -60,7 +60,7 @@ if (isset($_GET['delproid']))
 						<td><?php echo $result['quantity']; ?></td>
 						<td>Kshs. <?php echo $result['price']; ?></td>
 						<td><?php echo $result['cmrId']; ?></td>
-						<td><a href="customer.php?custId=<?php echo $result['cmrId']; ?>">View Details</a></td>
+						<td><a href="Customer.php?custId=<?php echo $result['cmrId']; ?>">View Details</a></td>
 						<?php 
 							if ($result['status'] == '0') { ?>
 							<td><a href="?shiftid=<?php echo $result['id']; ?>">Confirm Order</a></td>	

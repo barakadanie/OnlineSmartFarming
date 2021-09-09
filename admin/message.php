@@ -51,8 +51,8 @@
 					<td><?php echo $fm->textShorten($result['message'],30);?></td>
 					<td><?php echo $fm->formatDate($result['date']);?></td>
 					<td>
-						<a href="viewmsg.php?msgid=<?php echo $result['id'];?>">View</a> || 
-						<a href="replymsg.php?msgid=<?php echo $result['id'];?>">Reply</a>||
+						<a href="viewmessage.php?msgid=<?php echo $result['id'];?>">View</a> || 
+						<a href="replymessage.php?msgid=<?php echo $result['id'];?>">Reply</a>||
 						<a onclick="return confirm('Are you sure you want to Move the message!');" href="?seenid=<?php echo $result['id'];?>">Seen</a> 
 					</td>
 				</tr>
